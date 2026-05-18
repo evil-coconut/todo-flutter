@@ -1,9 +1,10 @@
 import 'package:get_it/get_it.dart';
+import 'package:todo/app/presentation/bloc/screensaver/screensaver_bloc.dart';
 
 final appIn = GetIt.instance;
 
 Future<void> initDI() async {
-  _initBlocAuth();
+  _initBlocScreensaver();
 
   _initRepoAuth();
 
@@ -14,7 +15,9 @@ Future<void> initDI() async {
 }
 
 //bloc
-void _initBlocAuth() {}
+void _initBlocScreensaver() {
+  appIn.registerFactory(() => ScreensaverBloc());
+}
 
 //repo
 void _initRepoAuth() {}

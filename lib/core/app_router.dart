@@ -1,4 +1,7 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
+import 'package:todo/app/domain/entities/main/main_tasks_list_data.dart';
+import 'package:todo/app/presentation/page/main_page.dart';
 import 'package:todo/app/presentation/page/screensaver_page.dart';
 
 part 'app_router.gr.dart';
@@ -8,10 +11,9 @@ class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
     AutoRoute(page: ScreensaverRoute.page, initial: true),
-    // CustomRoute(
-    //   path: '/main',
-    //   page: MainRoute.page,
-    //   transitionsBuilder: TransitionsBuilders.fadeIn,
-    // ),
+    CustomRoute(
+      page: MainRoute.page,
+      transitionsBuilder: TransitionsBuilders.fadeIn,
+    ),
   ];
 }
