@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:todo/app/presentation/bloc/main/main_bloc.dart';
+import 'package:todo/core/database/app_database.dart';
 
 final appIn = GetIt.instance;
 
@@ -29,4 +30,5 @@ void _initCore() {}
 
 Future<void> _initExternal() async {
   //TODO: здесь добавляются заранее подгружаемые пакеты(FlutterSecureStorage, Client..)
+  appIn.registerLazySingleton(() => AppDatabase(openConnection()));
 }

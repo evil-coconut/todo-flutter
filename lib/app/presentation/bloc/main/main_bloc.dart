@@ -15,6 +15,10 @@ class MainBloc extends Bloc<MainEvent, MainState> {
       event.when<FutureOr<void>>(
         getTasks: () {},
         navigationTo: (e) => emit(state.copyWith(corePage: e)),
+        showAddListPanel: (e) => emit(state.copyWith(showAddListPanel: e)),
+        addNewList: (title, colorIndex) {
+
+        }
       );
     });
   }

@@ -20,18 +20,24 @@ mixin _$MainEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() getTasks,
     required TResult Function(MainNavigationType e) navigationTo,
+    required TResult Function(bool show) showAddListPanel,
+    required TResult Function(String title, int colorIndex) addNewList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getTasks,
     TResult? Function(MainNavigationType e)? navigationTo,
+    TResult? Function(bool show)? showAddListPanel,
+    TResult? Function(String title, int colorIndex)? addNewList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getTasks,
     TResult Function(MainNavigationType e)? navigationTo,
+    TResult Function(bool show)? showAddListPanel,
+    TResult Function(String title, int colorIndex)? addNewList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +45,24 @@ mixin _$MainEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetTasks value) getTasks,
     required TResult Function(_NavigationTo value) navigationTo,
+    required TResult Function(_ShowAddListPanel value) showAddListPanel,
+    required TResult Function(_AddNewList value) addNewList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetTasks value)? getTasks,
     TResult? Function(_NavigationTo value)? navigationTo,
+    TResult? Function(_ShowAddListPanel value)? showAddListPanel,
+    TResult? Function(_AddNewList value)? addNewList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetTasks value)? getTasks,
     TResult Function(_NavigationTo value)? navigationTo,
+    TResult Function(_ShowAddListPanel value)? showAddListPanel,
+    TResult Function(_AddNewList value)? addNewList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -119,6 +131,8 @@ class _$GetTasksImpl implements _GetTasks {
   TResult when<TResult extends Object?>({
     required TResult Function() getTasks,
     required TResult Function(MainNavigationType e) navigationTo,
+    required TResult Function(bool show) showAddListPanel,
+    required TResult Function(String title, int colorIndex) addNewList,
   }) {
     return getTasks();
   }
@@ -128,6 +142,8 @@ class _$GetTasksImpl implements _GetTasks {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getTasks,
     TResult? Function(MainNavigationType e)? navigationTo,
+    TResult? Function(bool show)? showAddListPanel,
+    TResult? Function(String title, int colorIndex)? addNewList,
   }) {
     return getTasks?.call();
   }
@@ -137,6 +153,8 @@ class _$GetTasksImpl implements _GetTasks {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getTasks,
     TResult Function(MainNavigationType e)? navigationTo,
+    TResult Function(bool show)? showAddListPanel,
+    TResult Function(String title, int colorIndex)? addNewList,
     required TResult orElse(),
   }) {
     if (getTasks != null) {
@@ -150,6 +168,8 @@ class _$GetTasksImpl implements _GetTasks {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetTasks value) getTasks,
     required TResult Function(_NavigationTo value) navigationTo,
+    required TResult Function(_ShowAddListPanel value) showAddListPanel,
+    required TResult Function(_AddNewList value) addNewList,
   }) {
     return getTasks(this);
   }
@@ -159,6 +179,8 @@ class _$GetTasksImpl implements _GetTasks {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetTasks value)? getTasks,
     TResult? Function(_NavigationTo value)? navigationTo,
+    TResult? Function(_ShowAddListPanel value)? showAddListPanel,
+    TResult? Function(_AddNewList value)? addNewList,
   }) {
     return getTasks?.call(this);
   }
@@ -168,6 +190,8 @@ class _$GetTasksImpl implements _GetTasks {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetTasks value)? getTasks,
     TResult Function(_NavigationTo value)? navigationTo,
+    TResult Function(_ShowAddListPanel value)? showAddListPanel,
+    TResult Function(_AddNewList value)? addNewList,
     required TResult orElse(),
   }) {
     if (getTasks != null) {
@@ -251,6 +275,8 @@ class _$NavigationToImpl implements _NavigationTo {
   TResult when<TResult extends Object?>({
     required TResult Function() getTasks,
     required TResult Function(MainNavigationType e) navigationTo,
+    required TResult Function(bool show) showAddListPanel,
+    required TResult Function(String title, int colorIndex) addNewList,
   }) {
     return navigationTo(e);
   }
@@ -260,6 +286,8 @@ class _$NavigationToImpl implements _NavigationTo {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getTasks,
     TResult? Function(MainNavigationType e)? navigationTo,
+    TResult? Function(bool show)? showAddListPanel,
+    TResult? Function(String title, int colorIndex)? addNewList,
   }) {
     return navigationTo?.call(e);
   }
@@ -269,6 +297,8 @@ class _$NavigationToImpl implements _NavigationTo {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getTasks,
     TResult Function(MainNavigationType e)? navigationTo,
+    TResult Function(bool show)? showAddListPanel,
+    TResult Function(String title, int colorIndex)? addNewList,
     required TResult orElse(),
   }) {
     if (navigationTo != null) {
@@ -282,6 +312,8 @@ class _$NavigationToImpl implements _NavigationTo {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetTasks value) getTasks,
     required TResult Function(_NavigationTo value) navigationTo,
+    required TResult Function(_ShowAddListPanel value) showAddListPanel,
+    required TResult Function(_AddNewList value) addNewList,
   }) {
     return navigationTo(this);
   }
@@ -291,6 +323,8 @@ class _$NavigationToImpl implements _NavigationTo {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetTasks value)? getTasks,
     TResult? Function(_NavigationTo value)? navigationTo,
+    TResult? Function(_ShowAddListPanel value)? showAddListPanel,
+    TResult? Function(_AddNewList value)? addNewList,
   }) {
     return navigationTo?.call(this);
   }
@@ -300,6 +334,8 @@ class _$NavigationToImpl implements _NavigationTo {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetTasks value)? getTasks,
     TResult Function(_NavigationTo value)? navigationTo,
+    TResult Function(_ShowAddListPanel value)? showAddListPanel,
+    TResult Function(_AddNewList value)? addNewList,
     required TResult orElse(),
   }) {
     if (navigationTo != null) {
@@ -322,8 +358,325 @@ abstract class _NavigationTo implements MainEvent {
 }
 
 /// @nodoc
+abstract class _$$ShowAddListPanelImplCopyWith<$Res> {
+  factory _$$ShowAddListPanelImplCopyWith(_$ShowAddListPanelImpl value,
+          $Res Function(_$ShowAddListPanelImpl) then) =
+      __$$ShowAddListPanelImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool show});
+}
+
+/// @nodoc
+class __$$ShowAddListPanelImplCopyWithImpl<$Res>
+    extends _$MainEventCopyWithImpl<$Res, _$ShowAddListPanelImpl>
+    implements _$$ShowAddListPanelImplCopyWith<$Res> {
+  __$$ShowAddListPanelImplCopyWithImpl(_$ShowAddListPanelImpl _value,
+      $Res Function(_$ShowAddListPanelImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? show = null,
+  }) {
+    return _then(_$ShowAddListPanelImpl(
+      null == show
+          ? _value.show
+          : show // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ShowAddListPanelImpl implements _ShowAddListPanel {
+  const _$ShowAddListPanelImpl(this.show);
+
+  @override
+  final bool show;
+
+  @override
+  String toString() {
+    return 'MainEvent.showAddListPanel(show: $show)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ShowAddListPanelImpl &&
+            (identical(other.show, show) || other.show == show));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, show);
+
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ShowAddListPanelImplCopyWith<_$ShowAddListPanelImpl> get copyWith =>
+      __$$ShowAddListPanelImplCopyWithImpl<_$ShowAddListPanelImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getTasks,
+    required TResult Function(MainNavigationType e) navigationTo,
+    required TResult Function(bool show) showAddListPanel,
+    required TResult Function(String title, int colorIndex) addNewList,
+  }) {
+    return showAddListPanel(show);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getTasks,
+    TResult? Function(MainNavigationType e)? navigationTo,
+    TResult? Function(bool show)? showAddListPanel,
+    TResult? Function(String title, int colorIndex)? addNewList,
+  }) {
+    return showAddListPanel?.call(show);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getTasks,
+    TResult Function(MainNavigationType e)? navigationTo,
+    TResult Function(bool show)? showAddListPanel,
+    TResult Function(String title, int colorIndex)? addNewList,
+    required TResult orElse(),
+  }) {
+    if (showAddListPanel != null) {
+      return showAddListPanel(show);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetTasks value) getTasks,
+    required TResult Function(_NavigationTo value) navigationTo,
+    required TResult Function(_ShowAddListPanel value) showAddListPanel,
+    required TResult Function(_AddNewList value) addNewList,
+  }) {
+    return showAddListPanel(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetTasks value)? getTasks,
+    TResult? Function(_NavigationTo value)? navigationTo,
+    TResult? Function(_ShowAddListPanel value)? showAddListPanel,
+    TResult? Function(_AddNewList value)? addNewList,
+  }) {
+    return showAddListPanel?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetTasks value)? getTasks,
+    TResult Function(_NavigationTo value)? navigationTo,
+    TResult Function(_ShowAddListPanel value)? showAddListPanel,
+    TResult Function(_AddNewList value)? addNewList,
+    required TResult orElse(),
+  }) {
+    if (showAddListPanel != null) {
+      return showAddListPanel(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ShowAddListPanel implements MainEvent {
+  const factory _ShowAddListPanel(final bool show) = _$ShowAddListPanelImpl;
+
+  bool get show;
+
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ShowAddListPanelImplCopyWith<_$ShowAddListPanelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddNewListImplCopyWith<$Res> {
+  factory _$$AddNewListImplCopyWith(
+          _$AddNewListImpl value, $Res Function(_$AddNewListImpl) then) =
+      __$$AddNewListImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String title, int colorIndex});
+}
+
+/// @nodoc
+class __$$AddNewListImplCopyWithImpl<$Res>
+    extends _$MainEventCopyWithImpl<$Res, _$AddNewListImpl>
+    implements _$$AddNewListImplCopyWith<$Res> {
+  __$$AddNewListImplCopyWithImpl(
+      _$AddNewListImpl _value, $Res Function(_$AddNewListImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = null,
+    Object? colorIndex = null,
+  }) {
+    return _then(_$AddNewListImpl(
+      null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == colorIndex
+          ? _value.colorIndex
+          : colorIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddNewListImpl implements _AddNewList {
+  const _$AddNewListImpl(this.title, this.colorIndex);
+
+  @override
+  final String title;
+  @override
+  final int colorIndex;
+
+  @override
+  String toString() {
+    return 'MainEvent.addNewList(title: $title, colorIndex: $colorIndex)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddNewListImpl &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.colorIndex, colorIndex) ||
+                other.colorIndex == colorIndex));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, title, colorIndex);
+
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddNewListImplCopyWith<_$AddNewListImpl> get copyWith =>
+      __$$AddNewListImplCopyWithImpl<_$AddNewListImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getTasks,
+    required TResult Function(MainNavigationType e) navigationTo,
+    required TResult Function(bool show) showAddListPanel,
+    required TResult Function(String title, int colorIndex) addNewList,
+  }) {
+    return addNewList(title, colorIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getTasks,
+    TResult? Function(MainNavigationType e)? navigationTo,
+    TResult? Function(bool show)? showAddListPanel,
+    TResult? Function(String title, int colorIndex)? addNewList,
+  }) {
+    return addNewList?.call(title, colorIndex);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getTasks,
+    TResult Function(MainNavigationType e)? navigationTo,
+    TResult Function(bool show)? showAddListPanel,
+    TResult Function(String title, int colorIndex)? addNewList,
+    required TResult orElse(),
+  }) {
+    if (addNewList != null) {
+      return addNewList(title, colorIndex);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetTasks value) getTasks,
+    required TResult Function(_NavigationTo value) navigationTo,
+    required TResult Function(_ShowAddListPanel value) showAddListPanel,
+    required TResult Function(_AddNewList value) addNewList,
+  }) {
+    return addNewList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetTasks value)? getTasks,
+    TResult? Function(_NavigationTo value)? navigationTo,
+    TResult? Function(_ShowAddListPanel value)? showAddListPanel,
+    TResult? Function(_AddNewList value)? addNewList,
+  }) {
+    return addNewList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetTasks value)? getTasks,
+    TResult Function(_NavigationTo value)? navigationTo,
+    TResult Function(_ShowAddListPanel value)? showAddListPanel,
+    TResult Function(_AddNewList value)? addNewList,
+    required TResult orElse(),
+  }) {
+    if (addNewList != null) {
+      return addNewList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddNewList implements MainEvent {
+  const factory _AddNewList(final String title, final int colorIndex) =
+      _$AddNewListImpl;
+
+  String get title;
+  int get colorIndex;
+
+  /// Create a copy of MainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddNewListImplCopyWith<_$AddNewListImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$MainState {
-  dynamic get corePage => throw _privateConstructorUsedError;
+  MainNavigationType get corePage => throw _privateConstructorUsedError;
+  bool get showAddListPanel => throw _privateConstructorUsedError;
   MainTasksListData? get tasks => throw _privateConstructorUsedError;
   int? get error => throw _privateConstructorUsedError;
 
@@ -339,7 +692,11 @@ abstract class $MainStateCopyWith<$Res> {
   factory $MainStateCopyWith(MainState value, $Res Function(MainState) then) =
       _$MainStateCopyWithImpl<$Res, MainState>;
   @useResult
-  $Res call({dynamic corePage, MainTasksListData? tasks, int? error});
+  $Res call(
+      {MainNavigationType corePage,
+      bool showAddListPanel,
+      MainTasksListData? tasks,
+      int? error});
 }
 
 /// @nodoc
@@ -357,15 +714,20 @@ class _$MainStateCopyWithImpl<$Res, $Val extends MainState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? corePage = freezed,
+    Object? corePage = null,
+    Object? showAddListPanel = null,
     Object? tasks = freezed,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      corePage: freezed == corePage
+      corePage: null == corePage
           ? _value.corePage
           : corePage // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as MainNavigationType,
+      showAddListPanel: null == showAddListPanel
+          ? _value.showAddListPanel
+          : showAddListPanel // ignore: cast_nullable_to_non_nullable
+              as bool,
       tasks: freezed == tasks
           ? _value.tasks
           : tasks // ignore: cast_nullable_to_non_nullable
@@ -386,7 +748,11 @@ abstract class _$$MainStateImplCopyWith<$Res>
       __$$MainStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({dynamic corePage, MainTasksListData? tasks, int? error});
+  $Res call(
+      {MainNavigationType corePage,
+      bool showAddListPanel,
+      MainTasksListData? tasks,
+      int? error});
 }
 
 /// @nodoc
@@ -402,12 +768,20 @@ class __$$MainStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? corePage = freezed,
+    Object? corePage = null,
+    Object? showAddListPanel = null,
     Object? tasks = freezed,
     Object? error = freezed,
   }) {
     return _then(_$MainStateImpl(
-      corePage: freezed == corePage ? _value.corePage! : corePage,
+      corePage: null == corePage
+          ? _value.corePage
+          : corePage // ignore: cast_nullable_to_non_nullable
+              as MainNavigationType,
+      showAddListPanel: null == showAddListPanel
+          ? _value.showAddListPanel
+          : showAddListPanel // ignore: cast_nullable_to_non_nullable
+              as bool,
       tasks: freezed == tasks
           ? _value.tasks
           : tasks // ignore: cast_nullable_to_non_nullable
@@ -424,11 +798,17 @@ class __$$MainStateImplCopyWithImpl<$Res>
 
 class _$MainStateImpl implements _MainState {
   const _$MainStateImpl(
-      {this.corePage = MainNavigationType.tasks, this.tasks, this.error});
+      {this.corePage = MainNavigationType.tasks,
+      this.showAddListPanel = false,
+      this.tasks,
+      this.error});
 
   @override
   @JsonKey()
-  final dynamic corePage;
+  final MainNavigationType corePage;
+  @override
+  @JsonKey()
+  final bool showAddListPanel;
   @override
   final MainTasksListData? tasks;
   @override
@@ -436,7 +816,7 @@ class _$MainStateImpl implements _MainState {
 
   @override
   String toString() {
-    return 'MainState(corePage: $corePage, tasks: $tasks, error: $error)';
+    return 'MainState(corePage: $corePage, showAddListPanel: $showAddListPanel, tasks: $tasks, error: $error)';
   }
 
   @override
@@ -444,14 +824,17 @@ class _$MainStateImpl implements _MainState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MainStateImpl &&
-            const DeepCollectionEquality().equals(other.corePage, corePage) &&
+            (identical(other.corePage, corePage) ||
+                other.corePage == corePage) &&
+            (identical(other.showAddListPanel, showAddListPanel) ||
+                other.showAddListPanel == showAddListPanel) &&
             (identical(other.tasks, tasks) || other.tasks == tasks) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(corePage), tasks, error);
+  int get hashCode =>
+      Object.hash(runtimeType, corePage, showAddListPanel, tasks, error);
 
   /// Create a copy of MainState
   /// with the given fields replaced by the non-null parameter values.
@@ -464,12 +847,15 @@ class _$MainStateImpl implements _MainState {
 
 abstract class _MainState implements MainState {
   const factory _MainState(
-      {final dynamic corePage,
+      {final MainNavigationType corePage,
+      final bool showAddListPanel,
       final MainTasksListData? tasks,
       final int? error}) = _$MainStateImpl;
 
   @override
-  dynamic get corePage;
+  MainNavigationType get corePage;
+  @override
+  bool get showAddListPanel;
   @override
   MainTasksListData? get tasks;
   @override

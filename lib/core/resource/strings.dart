@@ -5,4 +5,5 @@ class AppStrings {
   static String calendar = 'Календарь';
   static String planned = 'Запланировано: ';
   static String addList = 'Добавить список';
+  static String placeholderAddList = 'Введите название списка';
 }

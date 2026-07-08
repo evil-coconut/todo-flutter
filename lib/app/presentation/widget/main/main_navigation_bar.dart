@@ -18,7 +18,6 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 52 + MediaQuery.of(context).padding.bottom,
       padding: const EdgeInsets.symmetric(vertical: 8),
       decoration: const BoxDecoration(
         color: AppColors.white,
@@ -33,7 +32,6 @@ class _MainNavigationBarState extends State<MainNavigationBar> {
               builder: (context, state) =>
                 SizedBox(
                   width: 57,
-                  height: 40,
                   child: InkWell(
                     onTap: () => context.read<MainBloc>().add(MainEvent.navigationTo(e)),
                     child: Column(
