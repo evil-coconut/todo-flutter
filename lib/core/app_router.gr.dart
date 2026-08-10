@@ -14,11 +14,11 @@ part of 'app_router.dart';
 /// [MainPage]
 class MainRoute extends PageRouteInfo<MainRouteArgs> {
   MainRoute({Key? key, MainTasksListData? tasks, List<PageRouteInfo>? children})
-    : super(
-        MainRoute.name,
-        args: MainRouteArgs(key: key, tasks: tasks),
-        initialChildren: children,
-      );
+      : super(
+          MainRoute.name,
+          args: MainRouteArgs(key: key, tasks: tasks),
+          initialChildren: children,
+        );
 
   static const String name = 'MainRoute';
 
@@ -44,4 +44,14 @@ class MainRouteArgs {
   String toString() {
     return 'MainRouteArgs{key: $key, tasks: $tasks}';
   }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! MainRouteArgs) return false;
+    return key == other.key && tasks == other.tasks;
+  }
+
+  @override
+  int get hashCode => key.hashCode ^ tasks.hashCode;
 }

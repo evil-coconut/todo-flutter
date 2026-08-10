@@ -5,4 +5,6 @@ class AppImages {
   static const String settings = 'assets/images/settings.svg';
   static const String arrow = 'assets/images/arrow.svg';
   static const String plus = 'assets/images/plus.svg';
+  static const String penEdit = 'assets/images/pen_edit.svg';
+  static const String trash = 'assets/images/trash.svg';
 }

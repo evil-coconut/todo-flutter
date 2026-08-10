@@ -5,7 +5,7 @@ class MainState with _$MainState {
   const factory MainState({
     @Default(MainNavigationType.tasks) MainNavigationType corePage,
     @Default(false) bool showAddListPanel,
-    MainTasksListData? tasks,
+    List<ListTemplateData>? tasks,
     int? error,
   }) = _MainState;
 

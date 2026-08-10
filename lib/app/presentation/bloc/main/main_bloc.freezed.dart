@@ -21,7 +21,7 @@ mixin _$MainEvent {
     required TResult Function() getTasks,
     required TResult Function(MainNavigationType e) navigationTo,
     required TResult Function(bool show) showAddListPanel,
-    required TResult Function(String title, int colorIndex) addNewList,
+    required TResult Function(String title, String color) addNewList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -29,7 +29,7 @@ mixin _$MainEvent {
     TResult? Function()? getTasks,
     TResult? Function(MainNavigationType e)? navigationTo,
     TResult? Function(bool show)? showAddListPanel,
-    TResult? Function(String title, int colorIndex)? addNewList,
+    TResult? Function(String title, String color)? addNewList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,7 +37,7 @@ mixin _$MainEvent {
     TResult Function()? getTasks,
     TResult Function(MainNavigationType e)? navigationTo,
     TResult Function(bool show)? showAddListPanel,
-    TResult Function(String title, int colorIndex)? addNewList,
+    TResult Function(String title, String color)? addNewList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -132,7 +132,7 @@ class _$GetTasksImpl implements _GetTasks {
     required TResult Function() getTasks,
     required TResult Function(MainNavigationType e) navigationTo,
     required TResult Function(bool show) showAddListPanel,
-    required TResult Function(String title, int colorIndex) addNewList,
+    required TResult Function(String title, String color) addNewList,
   }) {
     return getTasks();
   }
@@ -143,7 +143,7 @@ class _$GetTasksImpl implements _GetTasks {
     TResult? Function()? getTasks,
     TResult? Function(MainNavigationType e)? navigationTo,
     TResult? Function(bool show)? showAddListPanel,
-    TResult? Function(String title, int colorIndex)? addNewList,
+    TResult? Function(String title, String color)? addNewList,
   }) {
     return getTasks?.call();
   }
@@ -154,7 +154,7 @@ class _$GetTasksImpl implements _GetTasks {
     TResult Function()? getTasks,
     TResult Function(MainNavigationType e)? navigationTo,
     TResult Function(bool show)? showAddListPanel,
-    TResult Function(String title, int colorIndex)? addNewList,
+    TResult Function(String title, String color)? addNewList,
     required TResult orElse(),
   }) {
     if (getTasks != null) {
@@ -276,7 +276,7 @@ class _$NavigationToImpl implements _NavigationTo {
     required TResult Function() getTasks,
     required TResult Function(MainNavigationType e) navigationTo,
     required TResult Function(bool show) showAddListPanel,
-    required TResult Function(String title, int colorIndex) addNewList,
+    required TResult Function(String title, String color) addNewList,
   }) {
     return navigationTo(e);
   }
@@ -287,7 +287,7 @@ class _$NavigationToImpl implements _NavigationTo {
     TResult? Function()? getTasks,
     TResult? Function(MainNavigationType e)? navigationTo,
     TResult? Function(bool show)? showAddListPanel,
-    TResult? Function(String title, int colorIndex)? addNewList,
+    TResult? Function(String title, String color)? addNewList,
   }) {
     return navigationTo?.call(e);
   }
@@ -298,7 +298,7 @@ class _$NavigationToImpl implements _NavigationTo {
     TResult Function()? getTasks,
     TResult Function(MainNavigationType e)? navigationTo,
     TResult Function(bool show)? showAddListPanel,
-    TResult Function(String title, int colorIndex)? addNewList,
+    TResult Function(String title, String color)? addNewList,
     required TResult orElse(),
   }) {
     if (navigationTo != null) {
@@ -429,7 +429,7 @@ class _$ShowAddListPanelImpl implements _ShowAddListPanel {
     required TResult Function() getTasks,
     required TResult Function(MainNavigationType e) navigationTo,
     required TResult Function(bool show) showAddListPanel,
-    required TResult Function(String title, int colorIndex) addNewList,
+    required TResult Function(String title, String color) addNewList,
   }) {
     return showAddListPanel(show);
   }
@@ -440,7 +440,7 @@ class _$ShowAddListPanelImpl implements _ShowAddListPanel {
     TResult? Function()? getTasks,
     TResult? Function(MainNavigationType e)? navigationTo,
     TResult? Function(bool show)? showAddListPanel,
-    TResult? Function(String title, int colorIndex)? addNewList,
+    TResult? Function(String title, String color)? addNewList,
   }) {
     return showAddListPanel?.call(show);
   }
@@ -451,7 +451,7 @@ class _$ShowAddListPanelImpl implements _ShowAddListPanel {
     TResult Function()? getTasks,
     TResult Function(MainNavigationType e)? navigationTo,
     TResult Function(bool show)? showAddListPanel,
-    TResult Function(String title, int colorIndex)? addNewList,
+    TResult Function(String title, String color)? addNewList,
     required TResult orElse(),
   }) {
     if (showAddListPanel != null) {
@@ -516,7 +516,7 @@ abstract class _$$AddNewListImplCopyWith<$Res> {
           _$AddNewListImpl value, $Res Function(_$AddNewListImpl) then) =
       __$$AddNewListImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String title, int colorIndex});
+  $Res call({String title, String color});
 }
 
 /// @nodoc
@@ -533,17 +533,17 @@ class __$$AddNewListImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? title = null,
-    Object? colorIndex = null,
+    Object? color = null,
   }) {
     return _then(_$AddNewListImpl(
       null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      null == colorIndex
-          ? _value.colorIndex
-          : colorIndex // ignore: cast_nullable_to_non_nullable
-              as int,
+      null == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -551,16 +551,16 @@ class __$$AddNewListImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AddNewListImpl implements _AddNewList {
-  const _$AddNewListImpl(this.title, this.colorIndex);
+  const _$AddNewListImpl(this.title, this.color);
 
   @override
   final String title;
   @override
-  final int colorIndex;
+  final String color;
 
   @override
   String toString() {
-    return 'MainEvent.addNewList(title: $title, colorIndex: $colorIndex)';
+    return 'MainEvent.addNewList(title: $title, color: $color)';
   }
 
   @override
@@ -569,12 +569,11 @@ class _$AddNewListImpl implements _AddNewList {
         (other.runtimeType == runtimeType &&
             other is _$AddNewListImpl &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.colorIndex, colorIndex) ||
-                other.colorIndex == colorIndex));
+            (identical(other.color, color) || other.color == color));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, title, colorIndex);
+  int get hashCode => Object.hash(runtimeType, title, color);
 
   /// Create a copy of MainEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -590,9 +589,9 @@ class _$AddNewListImpl implements _AddNewList {
     required TResult Function() getTasks,
     required TResult Function(MainNavigationType e) navigationTo,
     required TResult Function(bool show) showAddListPanel,
-    required TResult Function(String title, int colorIndex) addNewList,
+    required TResult Function(String title, String color) addNewList,
   }) {
-    return addNewList(title, colorIndex);
+    return addNewList(title, color);
   }
 
   @override
@@ -601,9 +600,9 @@ class _$AddNewListImpl implements _AddNewList {
     TResult? Function()? getTasks,
     TResult? Function(MainNavigationType e)? navigationTo,
     TResult? Function(bool show)? showAddListPanel,
-    TResult? Function(String title, int colorIndex)? addNewList,
+    TResult? Function(String title, String color)? addNewList,
   }) {
-    return addNewList?.call(title, colorIndex);
+    return addNewList?.call(title, color);
   }
 
   @override
@@ -612,11 +611,11 @@ class _$AddNewListImpl implements _AddNewList {
     TResult Function()? getTasks,
     TResult Function(MainNavigationType e)? navigationTo,
     TResult Function(bool show)? showAddListPanel,
-    TResult Function(String title, int colorIndex)? addNewList,
+    TResult Function(String title, String color)? addNewList,
     required TResult orElse(),
   }) {
     if (addNewList != null) {
-      return addNewList(title, colorIndex);
+      return addNewList(title, color);
     }
     return orElse();
   }
@@ -660,11 +659,11 @@ class _$AddNewListImpl implements _AddNewList {
 }
 
 abstract class _AddNewList implements MainEvent {
-  const factory _AddNewList(final String title, final int colorIndex) =
+  const factory _AddNewList(final String title, final String color) =
       _$AddNewListImpl;
 
   String get title;
-  int get colorIndex;
+  String get color;
 
   /// Create a copy of MainEvent
   /// with the given fields replaced by the non-null parameter values.
@@ -677,7 +676,7 @@ abstract class _AddNewList implements MainEvent {
 mixin _$MainState {
   MainNavigationType get corePage => throw _privateConstructorUsedError;
   bool get showAddListPanel => throw _privateConstructorUsedError;
-  MainTasksListData? get tasks => throw _privateConstructorUsedError;
+  List<ListTemplateData>? get tasks => throw _privateConstructorUsedError;
   int? get error => throw _privateConstructorUsedError;
 
   /// Create a copy of MainState
@@ -695,7 +694,7 @@ abstract class $MainStateCopyWith<$Res> {
   $Res call(
       {MainNavigationType corePage,
       bool showAddListPanel,
-      MainTasksListData? tasks,
+      List<ListTemplateData>? tasks,
       int? error});
 }
 
@@ -731,7 +730,7 @@ class _$MainStateCopyWithImpl<$Res, $Val extends MainState>
       tasks: freezed == tasks
           ? _value.tasks
           : tasks // ignore: cast_nullable_to_non_nullable
-              as MainTasksListData?,
+              as List<ListTemplateData>?,
       error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -751,7 +750,7 @@ abstract class _$$MainStateImplCopyWith<$Res>
   $Res call(
       {MainNavigationType corePage,
       bool showAddListPanel,
-      MainTasksListData? tasks,
+      List<ListTemplateData>? tasks,
       int? error});
 }
 
@@ -783,9 +782,9 @@ class __$$MainStateImplCopyWithImpl<$Res>
           : showAddListPanel // ignore: cast_nullable_to_non_nullable
               as bool,
       tasks: freezed == tasks
-          ? _value.tasks
+          ? _value._tasks
           : tasks // ignore: cast_nullable_to_non_nullable
-              as MainTasksListData?,
+              as List<ListTemplateData>?,
       error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -800,8 +799,9 @@ class _$MainStateImpl implements _MainState {
   const _$MainStateImpl(
       {this.corePage = MainNavigationType.tasks,
       this.showAddListPanel = false,
-      this.tasks,
-      this.error});
+      final List<ListTemplateData>? tasks,
+      this.error})
+      : _tasks = tasks;
 
   @override
   @JsonKey()
@@ -809,8 +809,16 @@ class _$MainStateImpl implements _MainState {
   @override
   @JsonKey()
   final bool showAddListPanel;
+  final List<ListTemplateData>? _tasks;
   @override
-  final MainTasksListData? tasks;
+  List<ListTemplateData>? get tasks {
+    final value = _tasks;
+    if (value == null) return null;
+    if (_tasks is EqualUnmodifiableListView) return _tasks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final int? error;
 
@@ -828,13 +836,13 @@ class _$MainStateImpl implements _MainState {
                 other.corePage == corePage) &&
             (identical(other.showAddListPanel, showAddListPanel) ||
                 other.showAddListPanel == showAddListPanel) &&
-            (identical(other.tasks, tasks) || other.tasks == tasks) &&
+            const DeepCollectionEquality().equals(other._tasks, _tasks) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, corePage, showAddListPanel, tasks, error);
+  int get hashCode => Object.hash(runtimeType, corePage, showAddListPanel,
+      const DeepCollectionEquality().hash(_tasks), error);
 
   /// Create a copy of MainState
   /// with the given fields replaced by the non-null parameter values.
@@ -849,7 +857,7 @@ abstract class _MainState implements MainState {
   const factory _MainState(
       {final MainNavigationType corePage,
       final bool showAddListPanel,
-      final MainTasksListData? tasks,
+      final List<ListTemplateData>? tasks,
       final int? error}) = _$MainStateImpl;
 
   @override
@@ -857,7 +865,7 @@ abstract class _MainState implements MainState {
   @override
   bool get showAddListPanel;
   @override
-  MainTasksListData? get tasks;
+  List<ListTemplateData>? get tasks;
   @override
   int? get error;
 
